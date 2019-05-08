@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">menuTest</string>
+    <string name="action_nappi">action</string>
+    <string name="action_nappi2">2nd action</string>
+</resources>

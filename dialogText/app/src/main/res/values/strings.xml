@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android extension: Missiles</string>
+    <string name="titteli">Missiles extension for Android</string>
+    <string name="action_nappi">act 1</string>
+    <string name="action_nappi2">act 2</string>
+    <string name="action_quit">quit</string>
+    <string name="dialog_fire_missiles">Fire missiles</string>
+    <string name="fire">fire</string>
+    <string name="cancel">cancel</string>
+</resources>

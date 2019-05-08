@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        applicationId "com.example.vesada.iamapstesti"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //      resValue "string", "indooratlas_api_key", apiKey
+        //      resValue "string", "indooratlas_api_secret", apiSecret.replaceAll("%", "\\\\u0025")
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile 'com.indooratlas.android:indooratlas-android-sdk:2.5.2@aar'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+    compile 'com.google.maps.android:android-maps-utils:0.3.+'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.2.0'
+    compile 'com.pubnub:pubnub-android:3.7.5'
+    compile 'com.android.support:design:24.0.0'
+
+
+
+    // for Open Street Map support
+    compile 'org.osmdroid:osmdroid-android:5.6.4'
+    // compile 'com.github.MKergall:osmbonuspack:6.2'
+    compile 'com.google.android.gms:play-services:8.4.0'
+}
+repositories{
+    maven {
+      //  classpath 'com.android.tools.build:gradle:2.2.2'
+
+        url "http://indooratlas-ltd.bintray.com/mvn-public"
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        //classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.google.gms:google-services:3.1.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
